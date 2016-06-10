@@ -1,0 +1,5 @@
+m = int(input())
+a = input()
+lis = a.split()
+m_list = list(map(int, lis))
+print(sorted(m_list)[m-2])
