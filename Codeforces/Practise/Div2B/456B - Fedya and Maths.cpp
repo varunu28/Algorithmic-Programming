@@ -10,12 +10,13 @@
 using namespace std;
 
 
-int main(){
+int main()
+{
     string s;
     in s;
-    
+
     int last;
-    
+
     if(s.length()>1)
     {
         last = atoi(s.substr(s.length()-2,s.length()).c_str());
@@ -24,9 +25,9 @@ int main(){
     {
         last=atoi(s.c_str());
     }
-    
+
     int sum=1;
-    
+
     if(last%4==0)
     {
         sum+=7;
@@ -43,7 +44,7 @@ int main(){
     {
         sum+=15;
     }
-    
+
     if(last%2==0)
     {
         sum+=6;
@@ -52,7 +53,7 @@ int main(){
     {
         sum+=4;
     }
-    
+
     cout<<sum%5;
-	return 0;
+    return 0;
 }
