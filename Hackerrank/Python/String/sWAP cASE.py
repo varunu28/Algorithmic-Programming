@@ -9,6 +9,6 @@ while i < len(inp_str):
         out_str += inp_str[i].lower()
     else:
         out_str += inp_str[i]
-    i+=1
+    i += 1
 
 print(out_str)

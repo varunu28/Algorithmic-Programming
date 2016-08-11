@@ -7,7 +7,7 @@ n = int(input())
 a = input()
 lis = a.split()
 n_list = list(map(int, lis))
-set2= set(n_list)
+set2 = set(n_list)
 
 x = set1.difference(set2)
 y = set2.difference(set1)

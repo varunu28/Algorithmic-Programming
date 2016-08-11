@@ -1,6 +1,6 @@
-for _ in range(int(input())):   
+for _ in range(int(input())):
     try:
         a, b = map(int, input().split())
-        print(a//b)      
+        print(a//b)
     except (ZeroDivisionError, ValueError) as e:
         print("Error Code:", e)

@@ -1,5 +1,5 @@
 n = int(input())
-s = set(map(int, input().split())) 
+s = set(map(int, input().split()))
 N = int(input())
 i = 0
 while i < N:
@@ -12,10 +12,9 @@ while i < N:
             s.remove(int(l[1]))
         else:
             s.discard(int(l[1]))
-    i+=1
+    i += 1
 sum = 0
 for j in s:
     sum += j
 
 print(sum)
-  

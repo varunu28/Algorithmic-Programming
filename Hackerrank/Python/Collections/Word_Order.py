@@ -9,7 +9,7 @@ for i in range(n):
         inp_dict[temp] += 1
     else:
         inp_dict[temp] = 1
- 
+
 print(len(inp_dict))
 ans = ''
 

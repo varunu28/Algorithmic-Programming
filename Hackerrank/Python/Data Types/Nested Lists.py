@@ -1,16 +1,16 @@
 n = int(input())
 arr = []
 
-while n>0:
+while n > 0:
     temp = []
     name = input()
     grade = float(input())
     temp.append(name)
     temp.append(grade)
     arr.append(temp)
-    n-=1
+    n -= 1
 
-grade_arr=[]
+grade_arr = []
 
 for i in arr:
     grade_arr.append(i[1])
@@ -22,7 +22,7 @@ while m < len(grade_arr):
     if grade_arr[m] != grade_arr[m+1]:
         second_low = grade_arr[m+1]
         break
-    m+=1
+    m += 1
 
 names = []
 

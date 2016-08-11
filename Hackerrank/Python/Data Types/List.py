@@ -19,6 +19,5 @@ while query > 0:
         print(n.count(int(list1[1])))
     elif list1[0] == 'pop':
         temp = n.pop()
-        #print(temp)
-    query-=1
-    
+        # print(temp)
+    query -= 1

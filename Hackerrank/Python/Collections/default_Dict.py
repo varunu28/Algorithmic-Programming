@@ -7,7 +7,7 @@ B = defaultdict(list)
 for i in range(n):
     temp = input()
     A[temp].append(i+1)
-    
+
 for j in range(m):
     temp = input()
     if temp in A:

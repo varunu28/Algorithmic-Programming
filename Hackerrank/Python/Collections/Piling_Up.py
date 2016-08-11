@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def stackable(cubes):
     curr = cubes.popleft() if cubes[0] > cubes[-1] else cubes.pop()
     while cubes:
@@ -14,4 +15,4 @@ def stackable(cubes):
 
 for i in range(int(input())):
     n, cubes = input(), deque(map(int, input().split()))
-    print('Yes' if stackable(cubes) else 'No') 
+    print('Yes' if stackable(cubes) else 'No')

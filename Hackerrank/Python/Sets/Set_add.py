@@ -4,6 +4,5 @@ s = set()
 while i < n:
     country = input()
     s.add(country)
-    i+=1
+    i += 1
 print(len(s))
-    

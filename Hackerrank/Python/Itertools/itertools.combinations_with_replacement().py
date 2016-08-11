@@ -8,7 +8,7 @@ str_arr.sort()
 ans = []
 
 for i in list(combinations_with_replacement(str_arr, int_len)):
-	ans.append(''.join(i))
+    ans.append(''.join(i))
 
 for i in ans:
-	print(i)
+    print(i)

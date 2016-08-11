@@ -10,10 +10,10 @@ ans = []
 i = 1
 
 while i <= int_len:
-	temp = list(combinations(str_arr, i))
-	for j in temp:
-		ans.append(''.join(j))
-	i += 1
+    temp = list(combinations(str_arr, i))
+    for j in temp:
+        ans.append(''.join(j))
+    i += 1
 
 for item in ans:
-	print(item)
+    print(item)

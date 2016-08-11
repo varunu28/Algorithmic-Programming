@@ -7,9 +7,9 @@ str_arr = list(str_inp)
 ans = []
 
 for i in list(permutations(str_arr, int_len)):
-	ans.append(''.join(i))
+    ans.append(''.join(i))
 
 ans.sort()
 
 for i in ans:
-	print(i)
+    print(i)

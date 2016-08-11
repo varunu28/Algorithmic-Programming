@@ -1,5 +1,5 @@
 n = int(input())
-items= [x for x in input().split(' ')]
+items = [x for x in input().split(' ')]
 num = []
 for i in items:
     num.append(int(i))

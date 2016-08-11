@@ -13,4 +13,3 @@ for i in range(N):
         count_list[req_size] -= 1
 
 print(amt)
-    
