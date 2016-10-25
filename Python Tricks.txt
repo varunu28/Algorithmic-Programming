@@ -31,3 +31,8 @@ print(', '.join(str(x) for x in list_of_ints))
 import sys
 with open(sys.argv[1], 'r') as test_cases:
     for test in test_cases:
+
+
+# Function to rotate an array n times
+def rotate(l, n):
+    return l[n:] + l[:n]
