@@ -13,6 +13,34 @@ typedef unsigned long long ull;
 int main()
 {
 	io 
-	
+	ll t;
+	cin >> t;
+	ull a[t];
+	rep(i,t){
+		cin >> a[i];
+	}
+	ll q,num;
+	cin >> q;
+	ull tar,sum;
+	rep(i,q)
+	{
+		sum = 0;
+		cin >> tar;
+		rep(i,t)
+		{
+			sum += a[i];
+			if(sum >= tar)
+			{
+				num = i+1;
+				break;
+			}
+		}
+		if(sum < tar)
+		{
+			cout << -1 << endl;
+		}
+		else
+			cout << num << endl;
+	}
 	return 0;
 }
