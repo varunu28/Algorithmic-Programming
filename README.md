@@ -1,6 +1,6 @@
 # Algorithms and Data Structures
 
-I use this repository to store the solutions of problems which I solve from various online judges.I primarily use JAVA to solve the problems.
+I use this repository to store the solutions of problems which I solve from various online judges.I primarily use JAVA to solve the problems
 
 ### Online Judges for which I have kept solutions in this repo:
 1. Hackerrank
