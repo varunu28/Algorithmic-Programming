@@ -49,6 +49,23 @@ public class LinkedList {
         }
     }
 
+    public void sortedInsert(Node head, int val) {
+        Node newNode = new Node(val);
+
+        if (this.head.val >= val) {
+            newNode.next = this.head;
+            this.head = newNode;
+        }
+        else {
+            while (head.next != null && head.next.val < val) {
+                head = head.next;
+            }
+
+            newNode.next = head.next;
+            head.next = newNode;
+        }
+    }
+
     public int pop(Node head) {
         if (head == null) {
             return -1;
@@ -84,6 +101,35 @@ public class LinkedList {
             curr.next = newNode;
             curr = curr.next;
             i++;
+        }
+
+        return head;
+    }
+
+    public Node insertionSort(Node head) {
+
+        Node fast = head;
+
+        while (fast.next != null) {
+            Node slow = fast.next;
+            int min = fast.val;
+            Node temp = slow;
+
+            while (slow != null) {
+                if (slow.val < min) {
+                    min = slow.val;
+                    temp = slow;
+                }
+
+                slow = slow.next;
+            }
+
+            if (min != fast.val) {
+                temp.val = fast.val;
+                fast.val = min;
+            }
+
+            fast = fast.next;
         }
 
         return head;
