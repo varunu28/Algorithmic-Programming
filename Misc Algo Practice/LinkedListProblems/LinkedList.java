@@ -23,6 +23,43 @@ public class LinkedList {
 
     }
 
+    public void insertNth(Node head, int pos, int val) {
+        int size = getSize(head) - 1;
+
+        if (pos < 0 || pos > size) {
+            System.out.println("Invalid position");
+            return;
+        }
+
+        Node newNode = new Node(val);
+
+        if (pos == 0) {
+            newNode.next = head;
+            this.head = newNode;
+        }
+        else {
+            int count = 1;
+            while (count < pos) {
+                head = head.next;
+                count++;
+            }
+
+            newNode.next = head.next;
+            head.next = newNode;
+        }
+    }
+
+    public int pop(Node head) {
+        if (head == null) {
+            return -1;
+        }
+        else {
+            int val = head.val;
+            this.head = this.head.next;
+            return val;
+        }
+    }
+
     public int getSize(Node head) {
 
         int size = 0;
