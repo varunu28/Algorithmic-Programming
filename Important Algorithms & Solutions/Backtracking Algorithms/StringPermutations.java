@@ -1,48 +1,42 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class StringPermutations {
 
-    public static void main (String... args) {
+    public static void main (String... args) throws Exception {
 
-        String str = "ABCD";
-        permutehelper(str, "");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String str = br.readLine();
+
+        if (!str.isEmpty()) {
+            printPermute(str, "");
+        }
     }
 
-    public static void permutehelper(String s, String chosen) {
+    public static void printPermute(String s, String prefix) {
+        
         if (s.isEmpty()) {
-            System.out.println(chosen);
+            System.out.println(prefix);
         }
 
         else {
-            // choose/explore/unchoose
             
-			for (int i=0;i<s.length();i++) {
+            // choose/explore/unchoose
+            for (int i=0;i<s.length();i++) {
 
                 // Choose
                 char c = s.charAt(i);
-                chosen += c;
-                s = removeChar(s, i);
+                prefix += c;
+                s = s.substring(0, i) + s.substring(i+1);
 
                 // Explore
-                permutehelper(s, chosen);
+                printPermute(s, prefix);
 
                 // Unchoose
-                s = addChar(s, c, i);
-                chosen = removeChar(chosen, chosen.length()-1);
+                s = new StringBuilder("").append(s).insert(i, c).toString();
+                prefix = new StringBuilder("").append(prefix).deleteCharAt(prefix.length()-1).toString();
 
             }
         }
-    }
-
-    public static String removeChar(String s, int id) {
-        StringBuilder sb = new StringBuilder(s);
-        sb.deleteCharAt(id);
-
-        return sb.toString();
-    }
-
-    public static String addChar(String s, char c, int id) {
-        StringBuilder sb = new StringBuilder(s);
-        sb.insert(id, c);
-
-        return sb.toString();
     }
 }
