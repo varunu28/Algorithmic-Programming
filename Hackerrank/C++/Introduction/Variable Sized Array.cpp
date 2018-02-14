@@ -7,25 +7,30 @@ using namespace std;
 
 
 int main() {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
-    int n,q, value;
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    
+    int n,q;
     cin >> n >> q;
-    vector<vector<int>> nvec;
+    
+    vector<vector<int>> arr(n);
+    
     for (int i=0;i<n;i++) {
         int k;
         cin >> k;
-        vector<int> ivec;
-        for (int i=0;i<k;i++) {
-            cin >> value;
-            ivec.push_back(value);
+        vector<int> temp(k);
+        for (int j=0;j<k;j++) {
+            int t;
+            cin >> temp[j];
         }
-        nvec.push_back(ivec);
+        
+        arr[i] = temp;
     }
     
-    while (q--) {
-        int i,j;
-        cin >> i >> j;
-        cout << nvec[i][j] << endl;
+    int id1, id2;
+    
+    for (int i=0;i<q;i++) {
+        cin >> id1 >> id2;
+        cout << arr[id1][id2] << endl;
     }
     return 0;
 }
