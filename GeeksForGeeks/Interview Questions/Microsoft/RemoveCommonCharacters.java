@@ -43,6 +43,7 @@ public class RemoveCommonCharacters {
             }
         }
 
-        return sb.toString();
+        return sb.length() == 0 ? "-1" : sb.toString();
     }
 }
+
