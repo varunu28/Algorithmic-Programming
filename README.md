@@ -5,7 +5,7 @@ I use this repository to store the solutions of problems which I solve from vari
 ## Online Judges for which I have kept solutions in this repo:
 #### 1. Hackerrank
 
-![image1](https://julienrenaux.fr/wp-content/uploads/2017/02/HackerRank_logo.png)
+![](https://marcuscript.files.wordpress.com/2017/05/hackerrank.png)
 
 #### 2. Hackerearth
 
