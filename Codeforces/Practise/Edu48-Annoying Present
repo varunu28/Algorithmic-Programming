@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+#define ll long long int
+#define pb push_back
+#define mp make_pair
+#define mod 1000000007
+#define pi 3.141592653589793
+using namespace std;
+ 
+ 
+int main() {
+    cout << setprecision(10);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+ 
+ 
+ 
+ 
+    ll n, m;
+    cin >> n >> m;
+    ll ans = 0;
+    while (m--) {
+        ll x, d;
+        cin >> x >> d;
+        ans += x * n;
+        if (d > 0) {
+            ans += n * (n - 1) / 2 * d;
+        }
+ 
+        else {
+            if (n % 2) {
+                ans += n / 2 * (n / 2 + 1) * d;
+            }
+ 
+            else {
+                ll t = n / 2 - 1;
+                ans += (t * (t + 1) + n / 2) * d;
+            }
+        }
+    }
+ 
+    cout << (double) ans / n;
+ 
+ 
+}
